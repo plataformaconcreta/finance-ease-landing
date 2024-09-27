@@ -12,8 +12,6 @@ const SignUpForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Here you would typically send this data to your backend
-    // For this example, we'll just simulate the process
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -31,36 +29,39 @@ const SignUpForm = () => {
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
       <div className="mb-4">
-        <Label htmlFor="name">Nome</Label>
+        <Label htmlFor="name" className="text-[#333]">Nome</Label>
         <Input
           id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          className="bg-white text-[#333] border-[#333]"
         />
       </div>
       <div className="mb-4">
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email" className="text-[#333]">Email</Label>
         <Input
           id="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          className="bg-white text-[#333] border-[#333]"
         />
       </div>
       <div className="mb-4">
-        <Label htmlFor="phone">Telefone</Label>
+        <Label htmlFor="phone" className="text-[#333]">Telefone</Label>
         <Input
           id="phone"
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           required
+          className="bg-white text-[#333] border-[#333]"
         />
       </div>
-      <Button type="submit" className="w-full">Inscrever-se</Button>
+      <Button type="submit" className="w-full bg-[#333] text-white hover:bg-[#444]">Inscrever-se</Button>
     </form>
   );
 };
