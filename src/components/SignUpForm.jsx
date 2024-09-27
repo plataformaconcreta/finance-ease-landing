@@ -29,39 +29,39 @@ const SignUpForm = () => {
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
       <div className="mb-4">
-        <Label htmlFor="name" className="text-[#333]">Nome</Label>
+        <Label htmlFor="name" className="text-[#f3c52a]">Nome</Label>
         <Input
           id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="bg-white text-[#333] border-[#333]"
+          className="bg-[#333] text-white border-[#f3c52a] focus:border-[#f3c52a]"
         />
       </div>
       <div className="mb-4">
-        <Label htmlFor="email" className="text-[#333]">Email</Label>
+        <Label htmlFor="email" className="text-[#f3c52a]">Email</Label>
         <Input
           id="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="bg-white text-[#333] border-[#333]"
+          className="bg-[#333] text-white border-[#f3c52a] focus:border-[#f3c52a]"
         />
       </div>
       <div className="mb-4">
-        <Label htmlFor="phone" className="text-[#333]">Telefone</Label>
+        <Label htmlFor="phone" className="text-[#f3c52a]">Telefone</Label>
         <Input
           id="phone"
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           required
-          className="bg-white text-[#333] border-[#333]"
+          className="bg-[#333] text-white border-[#f3c52a] focus:border-[#f3c52a]"
         />
       </div>
-      <Button type="submit" className="w-full bg-[#333] text-white hover:bg-[#444]">Inscrever-se</Button>
+      <Button type="submit" className="w-full bg-[#f3c52a] text-[#333] hover:bg-[#d3a820]">Inscrever-se</Button>
     </form>
   );
 };
