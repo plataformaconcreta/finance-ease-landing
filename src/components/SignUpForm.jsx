@@ -9,9 +9,36 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(/\D/g, '');
+    if (value.length <= 12) {
+      let formattedValue = '+351 ';
+      if (value.length > 3) {
+        formattedValue += value.slice(3, 6);
+        if (value.length > 6) {
+          formattedValue += ' ' + value.slice(6, 9);
+          if (value.length > 9) {
+            formattedValue += ' ' + value.slice(9);
+          }
+        }
+      }
+      setPhone(formattedValue);
+    }
+  };
+
+  const isValidPhone = (phone) => {
+    const phoneRegex = /^\+351 9\d{2} \d{3} \d{3}$/;
+    return phoneRegex.test(phone);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    if (!isValidPhone(phone)) {
+      toast.error("Por favor, insira um número de telemóvel português válido.");
+      return;
+    }
+
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -53,15 +80,15 @@ const SignUpForm = () => {
         />
       </div>
       <div className="mb-4">
-        <Label htmlFor="phone" className="text-[#f3c52a]">Telefone</Label>
+        <Label htmlFor="phone" className="text-[#f3c52a]">Telemóvel</Label>
         <Input
           id="phone"
           type="tel"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={handlePhoneChange}
           required
           className="bg-[#333] text-white border-[#f3c52a] focus:border-[#f3c52a]"
-          placeholder="(00) 00000-0000"
+          placeholder="+351 9xx xxx xxx"
         />
       </div>
       <Button type="submit" className="w-full bg-[#f3c52a] text-[#333] hover:bg-[#d3a820]">Começar Gratuitamente</Button>
