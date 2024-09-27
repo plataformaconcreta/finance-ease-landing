@@ -17,7 +17,7 @@ const SignUpForm = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Simulating a successful submission
-      toast.success("Inscrição realizada com sucesso!");
+      toast.success("Inscrição realizada com sucesso! Entraremos em contato em breve.");
       
       // Redirect to the signup page
       window.location.href = 'https://logy.shippix.pt/signup.php';
@@ -37,6 +37,7 @@ const SignUpForm = () => {
           onChange={(e) => setName(e.target.value)}
           required
           className="bg-[#333] text-white border-[#f3c52a] focus:border-[#f3c52a]"
+          placeholder="Seu nome completo"
         />
       </div>
       <div className="mb-4">
@@ -48,6 +49,7 @@ const SignUpForm = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
           className="bg-[#333] text-white border-[#f3c52a] focus:border-[#f3c52a]"
+          placeholder="seu@email.com"
         />
       </div>
       <div className="mb-4">
@@ -59,9 +61,11 @@ const SignUpForm = () => {
           onChange={(e) => setPhone(e.target.value)}
           required
           className="bg-[#333] text-white border-[#f3c52a] focus:border-[#f3c52a]"
+          placeholder="(00) 00000-0000"
         />
       </div>
-      <Button type="submit" className="w-full bg-[#f3c52a] text-[#333] hover:bg-[#d3a820]">Inscrever-se</Button>
+      <Button type="submit" className="w-full bg-[#f3c52a] text-[#333] hover:bg-[#d3a820]">Começar Gratuitamente</Button>
+      <p className="mt-2 text-sm text-center text-gray-300">Ao se inscrever, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
     </form>
   );
 };
