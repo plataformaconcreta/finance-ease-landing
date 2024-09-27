@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { PieChart, FileText, CreditCard, BarChart, Users, Globe, Lock, Zap, DollarSign, ShoppingCart, Truck, Package, FileInvoice, CreditCard as PaymentIcon } from "lucide-react";
+import { PieChart, FileText, CreditCard, BarChart, Users, Globe, Lock, Zap, DollarSign, ShoppingCart, Truck, Package } from "lucide-react";
 import SignUpForm from '../components/SignUpForm';
 
 const Index = () => {
@@ -60,8 +60,8 @@ const Index = () => {
               <FeatureCard icon={<Truck />} title="Gestão de Fullfilment" description="Controle o estoque no armazém SHIPPIX e gerencie todo o processo de fullfilment com facilidade." />
               <FeatureCard icon={<Package />} title="Gestão de Envios" description="Gerencie de forma completa todos os seus envios, desde a criação até a entrega." />
               <FeatureCard icon={<DollarSign />} title="Gestão de Saldos" description="Acompanhe e gerencie os saldos de todas as suas contas e marketplaces em um só lugar." />
-              <FeatureCard icon={<FileInvoice />} title="Gestão de Faturas" description="Crie, envie e acompanhe faturas de forma eficiente, mantendo sua contabilidade em dia." />
-              <FeatureCard icon={<PaymentIcon />} title="Gestão de Pagamentos" description="Controle todos os pagamentos recebidos e a receber, garantindo um fluxo de caixa saudável." />
+              <FeatureCard icon={<FileText />} title="Gestão de Faturas" description="Crie, envie e acompanhe faturas de forma eficiente, mantendo sua contabilidade em dia." />
+              <FeatureCard icon={<CreditCard />} title="Gestão de Pagamentos" description="Controle todos os pagamentos recebidos e a receber, garantindo um fluxo de caixa saudável." />
             </div>
           </section>
 
