@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { PieChart, FileText, CreditCard, BarChart, Users, Globe, Lock, Zap, DollarSign } from "lucide-react";
+import { PieChart, FileText, CreditCard, BarChart, Users, Globe, Lock, Zap, DollarSign, ShoppingCart, Truck, Package, FileInvoice, CreditCard as PaymentIcon } from "lucide-react";
 import SignUpForm from '../components/SignUpForm';
 
 const Index = () => {
@@ -33,8 +33,11 @@ const Index = () => {
 
         <main className="container mx-auto px-4 py-12">
           <section id="inicio" className="text-center mb-16">
-            <h1 className="text-4xl font-bold mb-4 text-[#f3c52a]">Gestão Facilitada de Finanças</h1>
-            <p className="text-xl mb-8">A melhor plataforma para gerenciar suas finanças de forma simples e eficiente</p>
+            <h1 className="text-4xl font-bold mb-4 text-[#f3c52a]">Gestão Completa para seu Negócio</h1>
+            <p className="text-xl mb-8">
+              LOGY: A plataforma definitiva para gerenciar suas finanças, vendas em marketplaces, 
+              logística e muito mais - tudo em um só lugar!
+            </p>
             <div className="flex justify-center gap-4 mb-12">
               <Button className="bg-[#f3c52a] text-[#333] hover:bg-[#d3a820]" onClick={() => scrollToSection('contato')}>Saiba Mais</Button>
               <Button variant="outline" className="text-[#f3c52a] border-[#f3c52a] hover:bg-[#f3c52a] hover:text-[#333]" onClick={() => scrollToSection('contato')}>Experimente Grátis</Button>
@@ -53,15 +56,18 @@ const Index = () => {
               <FeatureCard icon={<BarChart />} title="Análise de Tendências" description="Visualize tendências de gastos e receitas ao longo do tempo para planejar melhor seu futuro financeiro." />
               <FeatureCard icon={<Users />} title="Gestão Multi-usuário" description="Compartilhe o acesso com sua equipe ou família, definindo permissões personalizadas para cada usuário." />
               <FeatureCard icon={<Globe />} title="Acesso Global" description="Acesse suas informações financeiras de qualquer lugar, a qualquer momento, com nossa plataforma baseada em nuvem." />
-              <FeatureCard icon={<Lock />} title="Segurança Avançada" description="Proteja seus dados financeiros com criptografia de ponta e autenticação de dois fatores." />
-              <FeatureCard icon={<Zap />} title="Alertas Personalizados" description="Receba notificações sobre gastos excessivos, vencimentos de contas ou oportunidades de economia." />
-              <FeatureCard icon={<DollarSign />} title="Planejamento Orçamentário" description="Crie e gerencie orçamentos detalhados para atingir suas metas financeiras com mais facilidade." />
+              <FeatureCard icon={<ShoppingCart />} title="Integração com Marketplaces" description="Envie, liste e gerencie produtos na Worten, Fnac e Amazon diretamente da plataforma LOGY." />
+              <FeatureCard icon={<Truck />} title="Gestão de Fullfilment" description="Controle o estoque no armazém SHIPPIX e gerencie todo o processo de fullfilment com facilidade." />
+              <FeatureCard icon={<Package />} title="Gestão de Envios" description="Gerencie de forma completa todos os seus envios, desde a criação até a entrega." />
+              <FeatureCard icon={<DollarSign />} title="Gestão de Saldos" description="Acompanhe e gerencie os saldos de todas as suas contas e marketplaces em um só lugar." />
+              <FeatureCard icon={<FileInvoice />} title="Gestão de Faturas" description="Crie, envie e acompanhe faturas de forma eficiente, mantendo sua contabilidade em dia." />
+              <FeatureCard icon={<PaymentIcon />} title="Gestão de Pagamentos" description="Controle todos os pagamentos recebidos e a receber, garantindo um fluxo de caixa saudável." />
             </div>
           </section>
 
           <section id="contato" className="bg-[#444] rounded-lg p-8 mb-16">
             <h2 className="text-3xl font-bold mb-4 text-center text-[#f3c52a]">Comece Agora</h2>
-            <p className="text-center mb-6">Experimente o LOGY gratuitamente e transforme sua gestão financeira!</p>
+            <p className="text-center mb-6">Experimente o LOGY gratuitamente e transforme a gestão do seu negócio!</p>
             <SignUpForm />
           </section>
         </main>
